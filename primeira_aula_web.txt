@@ -1,0 +1,6 @@
+html, css, javascript, react, fastAPI python
+
+2 aps = 1 teórica com folha de rascunho e 1 prática = construir um site na sala 
+
+trabalho pratico final em dupla, apresentação
+
