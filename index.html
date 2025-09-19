@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disciplina de Desenvolvimento Web - Site sem CSS</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Desenvolvimento de Software Web</h1>
@@ -124,6 +124,97 @@
             </article>
         </section>
     </main>
+
+    <section id="form">
+        <h2>Formulários</h2>
+
+        <article>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="first">Nome: </label>
+                    <input type="text" id="firstname" name="firstname" required placeholder="Primeiro nome" maxlength="50" size="30">
+                    <br>
+                    <label for="last">Sobrenome: </label>
+                    <input type="text" id="lastname" name="lastname" required placeholder="Sobrenome" maxlength="50" size="30">
+                    <br>
+                    
+                    <label for="idade">Idade: </label>
+                    <input type="number" id="idade" name="idade" min="0" max="120" step="1" placeholder="Idade">
+                    <br>
+                    
+                    <label for="email">E-mail: </label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail" maxlength="50" size="30">
+                    <br>
+
+                    <p>Gênero: </p>
+                    <input type="radio" id="masculino" name="genero" value="M">
+                    <label for="masculino">Masculino</label>
+
+                    <input type="radio" id="feminino" name="genero" value="F">
+                    <label for="feminino">Feminino</label>
+
+
+                    <label">Carro preferido</label>
+                    <select id="car">
+                        <option>Volvo</option>
+                        <option>Saab</option>
+                        <option>Mercedes</option>
+                        <option>Audi</option>
+                    </select>
+                </fieldset>
+
+                <p>
+                    Button type=submit
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </p>
+
+                <section id="midia">
+                    <h2>Multimídia</h2>
+
+                    <h3>Imagem simples</h3>
+                    <img src="borboleta.jpg" alt="Borboleta" width="480px">
+
+
+
+                    <h3>Audio</h3>
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">
+                        <source src="audio.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+
+                    <h3>Vídeo</h3>
+                    <video width="480" height="320" controls>
+                        <source src="video.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </section>
+
+                    
+        </article>
+    </section>
+</main>
+
+<aside>
+    <h2>Boas práticas</h2>
+
+    <ol>
+        <li>Use sempre uma main por página</li>
+        <li>inclua o atributo alt em todas as imagens</li>
+        <li>etc</li>
+    </ol>
+</aside>
+
+<footer>
+    <h2>Contatos</h2>
+    <address>
+        Universidade Federal do Ceará<br>
+        Campus do Quixadá
+    </address>
+</footer>
 
 
 </body>
