@@ -1,0 +1,53 @@
+:root{ --accent: #f68411; --muted:#666 }
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:#fafafa;color:#222}
+.container{max-width:1000px;margin:20px auto;padding:0 16px}
+.header{background:linear-gradient(90deg,#fff 0%, #fff);border-bottom:1px solid #eee}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.header h1{font-size:1.1rem;margin:0}
+.header nav a{margin-left:12px;text-decoration:none;padding:6px}
+.header nav a.active{border-bottom:2px solid var(--accent);color:var(--accent)}
+
+
+.controls{display:flex;justify-content:space-between;align-items:center;margin:12px 0}
+.controls input{padding:8px;border:1px solid #ddd;border-radius:6px}
+.controls select{margin-left:8px;padding:8px;border-radius:6px}
+.count{color:var(--muted)}
+
+
+.user-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eee}
+.user-table th, .user-table td{padding:10px;text-align:left;border-bottom:1px solid #f3f3f3}
+.user-table thead th{background:#fafafa;font-weight:600}
+.user-table tbody tr.stripe{background:#fcfcfc}
+.btn{background:transparent;border:1px solid var(--accent);padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--accent)}
+.btn:hover{background:var(--accent);color:#fff}
+
+
+.pagination{display:flex;gap:8px;align-items:center;justify-content:center;margin:14px 0}
+.center{padding:30px;text-align:center}
+.error{color:#b00020}
+.small-muted{color:#666;font-size:0.9rem}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.address{grid-column:1 / -1}
+.posts-list{list-style:none;padding:0;margin:8px 0}
+.posts-list li{padding:8px;border:1px solid #eee;border-radius:8px;margin-bottom:8px;background:#fff;display:flex;justify-content:space-between}
+.post-title{max-width:75%}
+
+
+/* modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;padding:20px}
+.modal{background:#fff;border-radius:8px;max-width:720px;width:100%;padding:12px;border:1px solid #ddd}
+.modal header{display:flex;justify-content:space-between;align-items:center}
+.modal-body{margin-top:8px}
+
+
+/* responsive */
+@media (max-width:700px){
+.detail-grid{grid-template-columns:1fr}
+.header-inner{flex-direction:column;gap:8px;align-items:flex-start}
+.controls{flex-direction:column;align-items:flex-start;gap:8px}
+}
+
+
+/* small helper */
+.small-muted a{color:var(--accent)}

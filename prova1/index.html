@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" />
+    <title>Controle de Despesas Pessoais</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">Controle de Despesas Pessoais</header>
+
+    <script src="script.js"></script>
+
+    <article>
+      <form action="#" method="get">
+        <label class="descricao" for="descricao">Descrição: </label>
+        <input
+          type="text"
+          id="descricao"
+          name="descricao"
+          placeholder="Digite a descrição: "
+        />
+        <label class="valor" for="valor">Valor: </label>
+        <input
+          id="inputValor"
+          type="number"
+          id="number"
+          name="valor"
+          placeholder="Digite o valor: "
+        />
+        <label class="categorias" for="categorias">Categorias: </label>
+        <select id="select">
+          <option value="alimentacao">Alimentação</option>
+          <option value="transporte">Transporte</option>
+          <option value="educacao">Educação</option>
+          <option value="lazer">Lazer</option>
+          <option value="saude">Saúde</option>
+          <option value="academia">Academia</option>
+        </select>
+        <label class="valorTotal" for="valorTotal">Valor total: R$</label>
+      </form>
+      <button id="adicionar">Adicionar</button>
+    </article>
+
+
+
+
+
+
+
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Valor (R$)</th
+          <th>Ações</th>
+        </tr>
+
+      </thead>
+      <tbody id="tabela"></tbody>
+      <tfoot></tfoot>
+    </table>
+    <footer class="rodape">Maria José Pinho Barros - 556324</footer>
+  </body>
+</html>

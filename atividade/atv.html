@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Notas de Alunos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      input {
+        margin: 5px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      button {
+        margin: 5px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      #adicionarBtn {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      #limparBtn {
+        background-color: #f44336;
+        color: white;
+      }
+
+      table {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        background-color: white;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+      tr.aprovado {
+        background-color: #c8f7c5;
+      }
+
+      tr.reprovado {
+        background-color: #f7c5c5;
+      }
+
+      tr:hover {
+        background-color: #eee;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Controle de Notas de Alunos</h1>
+
+    <input type="text" id="nome" placeholder="Nome do aluno" />
+    <input type="number" id="nota1" placeholder="Nota 1" step="0.1" />
+    <input type="number" id="nota2" placeholder="Nota 2" step="0.1" />
+    <br />
+    <button id="adicionarBtn">Adicionar Aluno</button>
+    <button id="limparBtn">Limpar Lista</button>
+
+    <table id="tabelaAlunos">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Nota 1</th>
+          <th>Nota 2</th>
+          <th>Média</th>
+          <th>Situação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      const tabela = document.querySelector("#tabelaAlunos tbody");
+      const nomeInput = document.getElementById("nome");
+      const nota1Input = document.getElementById("nota1");
+      const nota2Input = document.getElementById("nota2");
+
+      document.getElementById("adicionarBtn").addEventListener("click", () => {
+        const nome = nomeInput.value.trim();
+        const nota1 = parseFloat(nota1Input.value);
+        const nota2 = parseFloat(nota2Input.value);
+
+        if (!nome || isNaN(nota1) || isNaN(nota2)) {
+          alert("Preencha todos os campos corretamente!");
+          return;
+        }
+
+        const media = ((nota1 + nota2) / 2).toFixed(1);
+        const situacao = media >= 7 ? "Aprovado" : "Reprovado";
+
+        const novaLinha = document.createElement("tr");
+        novaLinha.className = media >= 7 ? "aprovado" : "reprovado";
+
+        novaLinha.innerHTML = `
+            <td>${nome}</td>
+            <td>${nota1}</td>
+            <td>${nota2}</td>
+            <td>${media}</td>
+            <td>${situacao}</td>
+        `;
+
+        novaLinha.addEventListener("click", () => {
+          tabela.removeChild(novaLinha);
+        });
+
+        tabela.appendChild(novaLinha);
+
+        nomeInput.value = "";
+        nota1Input.value = "";
+        nota2Input.value = "";
+      });
+
+      document.getElementById("limparBtn").addEventListener("click", () => {
+        tabela.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>

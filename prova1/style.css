@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    height: 20px;
+}
+
+#inputValor {
+    padding:5px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid lightgray;
+}
+
+#select {
+    padding:5px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid lightgray;
+    width: 125px;
+}
+
+.valor {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left:10px;
+}
+
+.categorias {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left:10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    background-color: lightblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex-direction: rox;
+    align-center: center;
+    flex-direction: flex-end;
+}
+button:hover{
+    background-color: blue;
+}
+
+.rodape{
+    background-color:bisque;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    height: 30px;
+    margin-top: 65vh;
+}
+
+.descricao {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left:10px;
+}
+
+#descricao {
+    padding:5px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid lightgray;
+    width: 125px;
+}
+
+.valorTotal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left:10px;
+}
