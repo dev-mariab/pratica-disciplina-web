@@ -1,3 +1,2 @@
-atividade praticas da cadeira de web - 2025.2
+Atividades praticas da cadeira de Desenvolvimento Web - 2025.2
 
-#atividades!
